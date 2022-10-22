@@ -7,7 +7,7 @@ import { Store } from "./pages/Store"
 
 export const App = () => {
   return (
-    <Container maxWidth="lg">
+    <Container maxWidth="md">
       <Navbar />
       <Routes>
         <Route path="/" element={<Home />} />
