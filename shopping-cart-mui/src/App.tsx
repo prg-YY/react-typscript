@@ -1,19 +1,34 @@
-import { Container } from "@mui/material"
 import { Routes, Route } from "react-router-dom"
-import { Navbar } from "./components/Navbar"
-import { About } from "./pages/About"
+import { Box } from "@mui/material"
 import { Home } from "./pages/Home"
 import { Store } from "./pages/Store"
+import { About } from "./pages/About"
+import { Navbar } from "./components/Navbar"
+import { ShoppingCartProvider } from "./context/ShoppingCartContext"
 
-export const App = () => {
+function App() {
   return (
-    <Container maxWidth="md">
+    <ShoppingCartProvider>
       <Navbar />
-      <Routes>
-        <Route path="/" element={<Home />} />
-        <Route path="/about" element={<About />} />
-        <Route path="/store" element={<Store />} />
-      </Routes>
-    </Container>
+      <Box
+        sx={{
+          bgcolor: "white",
+          height: "auto",
+          margin: "16px",
+          border: "1px solid #e0e0e0",
+          borderRadius: "16px",
+          maxWidth: "100%",
+          overflow: "inherit",
+        }}
+      >
+        <Routes>
+          <Route path="/" element={<Home />} />
+          <Route path="/store" element={<Store />} />
+          <Route path="/about" element={<About />} />
+        </Routes>
+      </Box>
+    </ShoppingCartProvider>
   )
 }
+
+export default App

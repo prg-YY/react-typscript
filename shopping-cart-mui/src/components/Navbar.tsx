@@ -1,11 +1,10 @@
-import * as React from "react"
 import AppBar from "@mui/material/AppBar"
 import Toolbar from "@mui/material/Toolbar"
 import IconButton from "@mui/material/IconButton"
 import Container from "@mui/material/Container"
 import Button from "@mui/material/Button"
 import AirplanemodeActiveTwoToneIcon from "@mui/icons-material/AirplanemodeActiveTwoTone"
-import { Badge, Stack } from "@mui/material"
+import { Badge, Stack, Drawer } from "@mui/material"
 import ShoppingCartIcon from "@mui/icons-material/ShoppingCart"
 import { styled } from "@mui/material/styles"
 import { BadgeProps } from "@mui/material/Badge"
@@ -40,7 +39,7 @@ export const Navbar = () => {
             <Button href="/store">Store</Button>
           </Stack>
           <IconButton aria-label="cart" sx={{ marginLeft: "auto" }}>
-            <StyledBadge badgeContent={1} color="info">
+            <StyledBadge badgeContent={2} color="info">
               <ShoppingCartIcon color="primary" />
             </StyledBadge>
           </IconButton>
